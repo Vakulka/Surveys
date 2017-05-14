@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body ng-controller="surveyController">
+    <button class="btn btn-default" ng-click="loadQuestions()">GetQuestions</button>
+
+
+    <script src="js/lib/angular-1.6.4/angular.min.js"></script>
+    <script src="js/lib/angular-1.6.4/angular-sanitize.min.js"></script>
+    <script type="text/javascript">
+        var myApp = angular.module('myApp', ['ngSanitize'])
+        .run(function ($rootScope) {
+
+        });
+
+    </script>
+    <script src="js/controllers/surveyController.js"></script>
+</body>
+</html>

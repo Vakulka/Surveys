@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body ng-controller="surveyController">
+    <div class="page-header">
+        <h1> List of surveys </h1>
+    </div>
+    <div class="panel">
+        <!--<div class="form-inline">
+            <div class="form-group">
+                <div class="col-md-8">
+                    <input class="form-control" ng-model="text" placeholder="Название" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <input type="number" class="form-control" ng-model="price" placeholder="Цена" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-8">
+                    <button class="btn btn-default" ng-click="addItem(text, price)">Добавить</button>
+                </div>
+            </div>
+        </div>-->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Owner</th>
+                    <th>Date Created</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in surveys">
+
+                    <td>{{item.name}}</td>
+                    <td>{{item.owner}}</td>
+                    <td>{{item.dateCreated}}</td>
+                    <td>
+                        <button class="btn btn-default" ng-click="emptyItemFunction(item)">Edit</button>
+                        <button class="btn btn-default" ng-click="openSurvey(item)">Open</button>
+                        <button class="btn btn-default" ng-click="emptyItemFunction(item)">Send</button>
+                        <button class="btn btn-default" ng-click="emptyItemFunction(item)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/lib/angular-1.6.4/angular.min.js"></script>
+    <script src="js/lib/angular-1.6.4/angular-sanitize.min.js"></script>
+    <script type="text/javascript">
+        var myApp = angular.module('myApp', ['ngSanitize'])
+        .run(function ($rootScope) {
+
+        });
+
+    </script>
+    <script src="js/controllers/surveyController.js"></script>
+</body>
+</html>

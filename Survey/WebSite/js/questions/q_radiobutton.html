@@ -1,0 +1,15 @@
+﻿<b> <span ng-bind="$index + 1"></span> . {{question.title}}</b>
+<p ng-bind="question.context"></p>
+<form action="">
+    <span ng-repeat="value in question.values">
+        <input type="radio"
+               name="{{question.title}}"
+               ng-value="value"
+               ng-checked="(value == question.default)">
+        <span ng-bind="value" ></span>
+    </span>
+</form>
+<!--
+    <div ng-include="buildQuestion(phone)"></div>
+    -->
+<button class="btn btn-default" ng-click="processItem(question)">Process</button>
