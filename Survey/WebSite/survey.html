@@ -89,6 +89,62 @@
                             <select ng-model="question.selected" ng-options="x for x in question.values"></select>
                             
                         </div>
+                        <div ng-switch-when="groupQuestions">
+                            <b> <span ng-bind="$index + 1"></span> . {{question.title}}</b>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th ng-repeat="value in question.values">
+                                            <div ng-switch="value.value">
+                                                <div ng-switch-when="%UserInput%"></div>
+                                                <div ng-switch-default>
+                                                    {{value.value}}
+                                                </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tr ng-repeat="shortQuestion in question.shortQuestions">
+                                    <td>{{shortQuestion.context}}</td>
+                                    <td ng-repeat="value in shortQuestion.values">
+                                        <div ng-switch="value.value">
+                                            <div ng-switch-when="%UserInput%">
+                                                <input type="checkbox"
+                                                       name="{{shortQuestion.title}}"
+                                                       ng-value="value.value"
+                                                       ng-model="value.selected"
+                                                       ng-checked="(value == shortQuestion.default)">
+                                                <input type="text"
+                                                       name="{{shortQuestion.title}}"
+                                                       ng-model="value.userInput"
+                                                       placeholder="Insert your option">
+                                            </div>
+                                            <div ng-switch-default>
+                                                <div ng-switch="question.subtype">
+
+                                                    <div ng-switch-when="radiobutton">
+                                                        <input type="radio"
+                                                                name="{{shortQuestion.id}}"
+                                                                ng-model="shortQuestion.selected"
+                                                                ng-value="value"
+                                                                ng-checked="(value == shortQuestion.selected)">
+                                                    </div>
+
+                                                    <div ng-switch-when="checkbox">
+                                                        <input type="checkbox"
+                                                                name="{{shortQuestion.id}}"
+                                                                ng-model="value.selected">
+                                                    </div>
+                                                    <!-- add comments  -->
+                                                
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                         <!--<button class="btn btn-default" ng-click="processItem(question)">Process</button>-->
                     </div>
                 </li>
