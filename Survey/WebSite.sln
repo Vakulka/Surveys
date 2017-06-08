@@ -25,13 +25,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite", "WebSite\", "{84B
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataService", "DataService\DataService.csproj", "{DDFCFC84-9ED3-4611-A72E-FF759C77D34F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostService", "SelfHostService\SelfHostService.csproj", "{958463D2-3191-4950-94D7-BA13257D82AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{84B6E166-0489-4CE2-BF7D-A95E15037CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{84B6E166-0489-4CE2-BF7D-A95E15037CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B6E166-0489-4CE2-BF7D-A95E15037CBA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B6E166-0489-4CE2-BF7D-A95E15037CBA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{DDFCFC84-9ED3-4611-A72E-FF759C77D34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDFCFC84-9ED3-4611-A72E-FF759C77D34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDFCFC84-9ED3-4611-A72E-FF759C77D34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDFCFC84-9ED3-4611-A72E-FF759C77D34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{958463D2-3191-4950-94D7-BA13257D82AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958463D2-3191-4950-94D7-BA13257D82AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958463D2-3191-4950-94D7-BA13257D82AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958463D2-3191-4950-94D7-BA13257D82AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

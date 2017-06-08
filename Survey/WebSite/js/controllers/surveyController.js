@@ -22,6 +22,13 @@
       console.log(item);
   };
   
+  $scope.CallRESTWCFService = function() {
+      $.getJSON("http://localhost:49923/SurveysService/GetData", {},
+        function (data) {
+            alert(data);
+        });
+  }
+
   $scope.addItem = function (text, price) {
 
   };
